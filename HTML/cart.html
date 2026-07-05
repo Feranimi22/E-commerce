@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="/CSS/CSS/cart.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo">
+        UrbanWear
+    </div>
+
+    <div class="menu-btn" id="menuBtn">
+
+        ☰
+
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="products.html">Shop</a>
+        </li>
+
+       <li class="cart-link">
+    <a href="cart.html">
+        Cart
+        <span id="cartCount" class="cart-count">0</span>
+    </a>
+</li>
+<!-- 
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+
+        <li>
+            <a href="signup.html">Signup</a>
+        </li> -->
+
+        <li>
+            <button class="logout-btn"
+                onclick="logoutUser()">
+                Logout
+            </button>
+        </li>
+
+    </ul>
+
+</nav>
+
+    <section class="cart-page">
+        
+        <div class="cart-banner">
+    <h2>Secure Checkout</h2>
+    <p>Fast delivery • Secure payment • Premium fashion</p>
+</div>
+
+        <h1>
+            Shopping Cart
+        </h1>
+
+        <div id="cartContainer">
+
+        </div>
+
+        <div class="order-summary">
+
+            <h2>
+                Order Summary
+            </h2>
+
+            <h3 id="totalPrice">
+                Total: $0
+            </h3>
+
+        </div>
+
+    </section>
+
+    <section class="checkout-section">
+
+        <h2>
+            Shipping Information
+        </h2>
+
+        <form id="checkoutForm">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="text" placeholder="Phone Number" required>
+
+            <input type="text" placeholder="Street Address" required>
+
+            <input type="text" placeholder="City" required>
+
+            <input type="text" placeholder="State" required>
+
+            <input type="text" placeholder="Zip Code" required>
+
+            <button type="button" onclick="placeOrder()">
+
+                Place Order
+
+            </button>
+
+        </form>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/cart.js"></script>
+    <script type="module" src="../JS/auth.js"></script>
+
+</body>
+
+</html>

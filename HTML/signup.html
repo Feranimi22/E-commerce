@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/CSS/signup.css">
+    <title>Create Account</title>
+</head>
+<body>
+
+    <div class="form-box">
+
+    <h2>Create Account</h2>
+
+    <input
+        type="text"
+        id="registerName"
+        placeholder="Full Name">
+
+    <input
+        type="email"
+        id="registerEmail"
+        placeholder="Email">
+
+    <input
+        type="password"
+        id="registerPassword"
+        placeholder="Password">
+
+    <div class="terms-box">
+
+    <input
+        type="checkbox"
+        id="terms">
+
+    <label for="termsCheckbox">
+        I agree to Terms & Conditions
+    </label>
+
+</div>
+
+    <button onclick="registerUser()">
+        Create Account
+    </button>
+
+    <p class="login-link">
+        Already have an account?
+        <a href="login.html">
+            Login
+        </a>
+    </p>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/signup.js"></script>
+    
+</body>
+</html>

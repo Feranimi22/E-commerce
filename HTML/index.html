@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanWear Clothing Store</title>
+    <link rel="stylesheet" href="/CSS/CSS/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                UrbanWear
+            </div>
+
+            <div class="menu-btn" id="menuBtn">
+
+                ☰
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <a href="#" onclick="goToShop()">Shop</a>
+
+                <a href="#" onclick="goToCart()">Cart</a>
+
+                <!-- <li>
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="signup.html">Signup</a>
+                </li> -->
+
+                <li>
+                    <button class="logout-btn" onclick="logoutUser()">
+                        Logout
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Discover Your Style
+            </h1>
+
+            <p>
+                Premium fashion for men, women and kids.
+                Shop the latest trends today.
+            </p>
+
+            <button onclick="goToShop()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <h3>Men</h3>
+            </div>
+
+            <div class="category-card">
+                <h3>Women</h3>
+            </div>
+
+            <div class="category-card">
+                <h3>Kids</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="featured-products">
+
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <img src="../images/hoodie.avif">
+
+                <h3>Classic Hoodie</h3>
+
+                <p>$45</p>
+
+                <button onclick="viewProduct(1)">
+                    View Product
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="../images/jacket.avif">
+
+                <h3>Denim Jacket</h3>
+
+                <p>$65</p>
+
+                <button onclick="viewProduct(2)">
+                    View Product
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="../images/shoe.avif">
+
+                <h3>Running Shoes</h3>
+
+                <p>$80</p>
+
+                <button onclick="viewProduct(3)">
+                    View Product
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="../images/watch.avif">
+
+                <h3>Luxury Watch</h3>
+
+                <p>$120</p>
+
+                <button onclick="viewProduct(4)">
+                    View Product
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+
+        <h2>Join Our Newsletter</h2>
+
+        <p>
+            Get updates about new arrivals and special offers.
+        </p>
+
+        <input type="email" id="newsletterEmail" placeholder="Enter your email">
+
+        <button onclick="subscribeNewsletter()" class="check">
+            Subscribe
+        </button>
+
+    </section>
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>UrbanWear</h3>
+
+            <p>
+                Premium fashion store for everyone.
+            </p>
+
+            <p>
+                © 2026 UrbanWear. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/index.js"></script>
+    <!-- <script type="module" src="../JS/auth.js"></script> -->
+
+</body>
+
+</html>

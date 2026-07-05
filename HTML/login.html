@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Account</title>
+
+    <link rel="stylesheet" href="/CSS/CSS/login.css">
+
+</head>
+
+<body>
+
+   
+    <div class="form-box">
+
+    <h2>Login</h2>
+
+
+    <input
+        type="email"
+        id="loginEmail"
+        placeholder="Email">
+
+    <input
+        type="password"
+        id="loginPassword"
+        placeholder="Password">
+
+    <button onclick="loginUser()">
+        Login
+    </button>
+
+    <div class="social-login">
+
+    <button class="google-btn">
+        Continue with Google
+    </button>
+<!-- 
+    <button class="facebook-btn">
+        Continue with Facebook
+    </button>
+
+    <button class="apple-btn">
+        Continue with Apple
+    </button> -->
+
+</div>
+
+    <p class="signup-link">
+        Don't have an account?
+        <a href="signup.html">
+            Sign Up
+        </a>
+    </p>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/login.js"></script>
+    <script src="../JS/auth.js"></script>
+
+</body>
+
+</html>

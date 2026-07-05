@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Products</title>
+
+    <link rel="stylesheet" href="/CSS/CSS/product.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo">
+        UrbanWear
+    </div>
+
+     <div class="menu-btn" id="menuBtn">
+
+        ☰
+
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href= "products.html">Shop</a>
+        </li>
+
+       <li class="cart-link">
+    <a href="cart.html">
+        Cart
+        <span id="cartCount" class="cart-count">0</span>
+    </a>
+</li>
+<!-- 
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+
+        <li>
+            <a href="signup.html">Signup</a>
+        </li> -->
+
+        <li>
+            <button class="logout-btn"
+                onclick="logoutUser()">
+                Logout
+            </button>
+        </li>
+
+    </ul>
+
+</nav>
+
+    <section class="shop-header">
+
+    <div class="slider">
+
+        <div class="slide active">
+            <img src="../images/banner1.avif">
+        </div>
+
+        <div class="slide">
+            <img src="../images/banner2.avif">
+        </div>
+
+        <div class="slide">
+            <img src="../images/banner3.avif">
+        </div>
+
+    </div>
+
+    <div class="header-content">
+        <h1>Our Collection</h1>
+        <p>Browse our latest fashion products</p>
+    </div>
+
+</section>
+
+    <section class="search-section">
+
+        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+
+    </section>
+
+    <section class="filter-buttons">
+
+        <button onclick="filterProducts('all')">
+            All
+        </button>
+
+        <button onclick="filterProducts('men')">
+            Men
+        </button>
+
+        <button onclick="filterProducts('women')">
+            Women
+        </button>
+
+        <button onclick="filterProducts('kids')">
+            Kids
+        </button>
+
+    </section>
+
+    <section class="product-grid" id="productGrid">
+
+        <div class="product-card men">
+
+            <img src="../images/hoodies.jpg">
+
+            <h3>Classic Hoodie</h3>
+
+            <p>$45</p>
+
+            <button onclick="viewProduct(1)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(1, 'Classic Hoodie', 45, '../images/hoodies.jpg')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card men">
+
+            <img src="../images/jackets.jpg">
+
+            <h3>Denim Jacket</h3>
+
+            <p>$65</p>
+
+            <button onclick="viewProduct(2)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(2, 'Denim Jacket', 65, '../images/jackets.jpg')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card men">
+
+            <img src="../images/shirts.avif">
+
+            <h3>Formal Shirt</h3>
+
+            <p>$35</p>
+
+            <button onclick="viewProduct(3)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(3, 'Formal Shirt', 35, '../images/shirts.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card men">
+
+            <img src="../images/shoes.avif">
+
+            <h3>Running Shoes</h3>
+
+            <p>$80</p>
+
+            <button onclick="viewProduct(4)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(4, 'Running Shoes', 80, '../images/shoes.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/dresses.avif">
+
+            <h3>Summer Dress</h3>
+
+            <p>$55</p>
+
+            <button onclick="viewProduct(5)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(5, 'Summer Dress', 55, '../images/dresses.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/skirt.avif">
+
+            <h3>Elegant Skirt</h3>
+
+            <p>$40</p>
+
+            <button onclick="viewProduct(6)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(6, 'Elegant Skirt', 40, '../images/skirt.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/heels.avif">
+
+            <h3>Fashion Heels</h3>
+
+            <p>$70</p>
+
+            <button onclick="viewProduct(7)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(7, 'Fashion Heels', 70, '../images/heels.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/handbag.avif">
+
+            <h3>Luxury Handbag</h3>
+
+            <p>$90</p>
+
+            <button onclick="viewProduct(8)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(8, 'Luxury Handbag', 90, '../images/handbag.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card kids">
+
+            <img src="../images/kidshirt.avif">
+
+            <h3>Kids T-Shirt</h3>
+
+            <p>$20</p>
+
+            <button onclick="viewProduct(9)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(9, 'Kids T-Shirt', 20, '../images/kidshirt.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card kids">
+
+            <img src="../images/kidshoe.avif">
+
+            <h3>Kids Sneakers</h3>
+
+            <p>$25</p>
+
+            <button onclick="viewProduct(10)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(10, 'Kids Sneakers', 25, '../images/kidshoe.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card kids">
+
+            <img src="../images/kidhoodie.avif">
+
+            <h3>Kids Hoodie</h3>
+
+            <p>$30</p>
+
+            <button onclick="viewProduct(11)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(11, 'Kids Hoodie', 30, '../images/kidhoodie.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card kids">
+
+            <img src="../images/kidcap.avif">
+
+            <h3>Kids Cap</h3>
+
+            <p>$15</p>
+
+            <button onclick="viewProduct(12)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(12, 'Kids Cap', 15, '../images/kidcap.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card men">
+
+            <img src="../images/watch.avif">
+
+            <h3>Luxury Watch</h3>
+
+            <p>$120</p>
+
+            <button onclick="viewProduct(13)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(13, 'Luxury Watch', 120, '../images/watch.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/sunglasses.avif">
+
+            <h3>Designer Glasses</h3>
+
+            <p>$50</p>
+
+            <button onclick="viewProduct(14)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(14, 'Designer Glasses', 50, '../images/sunglasses.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card men">
+
+            <img src="../images/cap.avif">
+
+            <h3>Premium Cap</h3>
+
+            <p>$25</p>
+
+            <button onclick="viewProduct(15)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(15, 'Premium Cap', 25, '../images/cap.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <div class="product-card women">
+
+            <img src="../images/Blazer.avif">
+
+            <h3>Office Blazer</h3>
+
+            <p>$85</p>
+
+            <button onclick="viewProduct(16)">
+                View Product
+            </button>
+
+            <button onclick="addToCart(16, 'Office Blazer', 85, '../images/Blazer.avif')">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/auth.js"></script>
+    <script type="module" src="../JS/products.js"></script>
+
+</body>
+
+</html>
