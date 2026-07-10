@@ -164,7 +164,7 @@ window.viewProduct = function(id){
 
     localStorage.setItem("selectedProduct", id);
 
-    window.location.href = "details.html";
+    window.location.href = "HTML/details.html";
 
 }
 

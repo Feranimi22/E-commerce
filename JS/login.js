@@ -94,7 +94,7 @@ if (googleBtn) {
       .then(() => {
 
         window.location.href =
-          "index.html";
+          "../index.html";
 
       })
 

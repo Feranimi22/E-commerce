@@ -36,7 +36,7 @@ function checkLogin(page) {
             confirmButtonColor: "#d90429"
         });
 
-        window.location.href = "login.html";
+        window.location.href = "HTML/login.html";
 
         return;
 

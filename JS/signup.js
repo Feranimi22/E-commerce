@@ -91,7 +91,7 @@ window.registerUser = function () {
             });
 
             window.location.href =
-                "login.html";
+                "HTML/login.html";
 
         })
 

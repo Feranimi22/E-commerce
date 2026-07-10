@@ -21,7 +21,7 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
 
     if (!user) {
-        window.location.href = "login.html";
+        window.location.href = "HTML/login.html";
         return;
     }
 
@@ -155,7 +155,7 @@ window.placeOrder = function() {
 });
     localStorage.removeItem(cartKey);
 
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 
 }
 
