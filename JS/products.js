@@ -317,7 +317,7 @@ window.viewProduct = function (id) {
     updateCartCount();
 
     window.location.href =
-        "HTML/details.html";
+        "details.html";
 
 }
 
@@ -363,7 +363,7 @@ window.logoutUser = function () {
                 confirmButtonColor: "#d90429"
             }).then(() => {
 
-                window.location.href = "HTML/login.html";
+                window.location.href = "login.html";
 
             });
 

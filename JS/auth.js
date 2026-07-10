@@ -49,7 +49,7 @@ window.goToProtectedPage = function(page) {
 
         alert("Please login to continue.");
 
-        window.location.href = "HTML/login.html";
+        window.location.href = "login.html";
 
         return;
 
@@ -66,7 +66,7 @@ window.logoutUser = function() {
 
     .then(() => {
 
-        window.location.href = "HTML/login.html";
+        window.location.href = "login.html";
 
     })
 

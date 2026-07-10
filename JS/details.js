@@ -164,7 +164,7 @@ window.viewProduct = function(id){
 
     localStorage.setItem("selectedProduct", id);
 
-    window.location.href = "HTML/details.html";
+    window.location.href = "details.html";
 
 }
 
@@ -296,7 +296,7 @@ window.logoutUser = function () {
 
         .then(() => {
 
-            window.location.href = "HTML/login.html";
+            window.location.href = "login.html";
 
         })
 

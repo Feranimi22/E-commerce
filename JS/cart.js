@@ -21,7 +21,7 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
 
     if (!user) {
-        window.location.href = "HTML/login.html";
+        window.location.href = "login.html";
         return;
     }
 
