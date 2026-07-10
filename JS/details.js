@@ -183,7 +183,7 @@ window.addCurrentProductToCart = function () {
             confirmButtonText: "Login"
         });
 
-        window.location.href = "login.html";
+        window.location.href = "HTML/login.html";
 
         return;
 
@@ -296,7 +296,7 @@ window.logoutUser = function () {
 
         .then(() => {
 
-            window.location.href = "login.html";
+            window.location.href = "HTML/login.html";
 
         })
 

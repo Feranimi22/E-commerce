@@ -165,7 +165,7 @@ window.logoutUser = function () {
 
     .then(() => {
 
-        window.location.href = "login.html";
+        window.location.href = "HTML/login.html";
 
     })
 

@@ -55,7 +55,7 @@ window.logoutUser = function () {
                 text: "You have been logged out successfully.",
                 confirmButtonColor: "#d90429"
             }).then(() => {
-                window.location.href = "login.html";
+                window.location.href = "HTML/login.html";
             });
         })
         .catch((error) => {

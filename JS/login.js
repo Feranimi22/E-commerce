@@ -62,7 +62,7 @@ window.loginUser = function () {
         confirmButtonColor: "#d90429"
       });
       window.location.href =
-        "index.html";
+        "../index.html";
 
     })
 
