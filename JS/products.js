@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
 
-import { getAuth, } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import {getAuth,signOut} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCk6PYkKtIXNl4YG7ci8degKd0sXkmsdl8",
@@ -242,6 +242,8 @@ window.loadProduct = function () {
         });
 
         return;
+        item.id === Number(productId);
+
 
     }
 
@@ -255,8 +257,17 @@ window.loadProduct = function () {
 
 };
 
-window.addEventListener("DOMContentLoaded", loadProduct);
+window.addEventListener("DOMContentLoaded", function(){
 
+    if(document.getElementById("productName")){
+
+        loadProduct();
+
+    }
+
+    updateCartCount();
+
+});
 
 // FILTER PRODUCTS
 
@@ -313,8 +324,6 @@ window.viewProduct = function (id) {
         "selectedProduct",
         id
     );
-
-    updateCartCount();
 
     window.location.href =
         "details.html";
@@ -388,8 +397,13 @@ const menuBtn =
 const navLinks =
     document.getElementById("navLinks");
 
-menuBtn.onclick = () => {
+if(menuBtn && navLinks){
 
-    navLinks.classList.toggle("active");
+    menuBtn.onclick = function(){
+
+        navLinks.classList.toggle("active");
+
+    };
+
 
 };

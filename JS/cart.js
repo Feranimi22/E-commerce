@@ -26,9 +26,10 @@ onAuthStateChanged(auth, (user) => {
     }
 
     displayCart();
+    updateCartCount();
 });
 
-window.displayCart = function() {
+window.displayCart = function () {
 
     const cartContainer =
         document.getElementById("cartContainer");
@@ -115,7 +116,7 @@ window.updateCartCount = function () {
 
 };
 
-window.removeItem = function(index) {
+window.removeItem = function (index) {
 
     const user = auth.currentUser;
 
@@ -137,7 +138,7 @@ window.removeItem = function(index) {
 
 }
 
-window.placeOrder = function() {
+window.placeOrder = function () {
 
     const user = auth.currentUser;
     if (!user) {
@@ -147,51 +148,46 @@ window.placeOrder = function() {
 
     const cartKey = `cart_${user.uid}`;
 
-    Swal.fire({
-    icon: "success",
-    title: "Order Placed!",
-    text: "Your order has been placed successfully.",
-    confirmButtonColor: "#d90429"
-});
     localStorage.removeItem(cartKey);
 
-    window.location.href = "../index.html";
+    updateCartCount();
 
-}
+    displayCart();
+
+    Swal.fire({
+        icon: "success",
+        title: "Order Placed!",
+        text: "Your order has been placed successfully.",
+        confirmButtonColor: "#d90429"
+    }).then(() => {
+        window.location.href = "../index.html";
+    });
+};
 
 window.logoutUser = function () {
 
     signOut(auth)
 
-    .then(() => {
+        .then(() => {
+            window.location.href = "login.html";
+        })
 
-        window.location.href = "HTML/login.html";
-
-    })
-
-    .catch((error) => {
-
-         Swal.fire({
+        .catch((error) => {
+            Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: error.message,
                 confirmButtonColor: "#d90429"
             });
-
-    });
-
-};
-
-const menuBtn =
-document.getElementById("menuBtn");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuBtn.onclick = () => {
-
-    navLinks.classList.toggle("active");
+        });
 
 };
 
-// console.log(localStorage);
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+if (menuBtn && navLinks) {
+    menuBtn.onclick = () => {
+        navLinks.classList.toggle("active");
+    };
+}

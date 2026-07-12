@@ -133,7 +133,7 @@ const products = [
     id:16,
     name:"Office Blazer",
     price:85,
-    image:"../images/Blazer.avif"
+    image:"../images/blazer.avif"
 }
 
 ];
@@ -183,17 +183,16 @@ window.addCurrentProductToCart = function () {
             confirmButtonText: "Login"
         });
 
-        window.location.href = "HTML/login.html";
+        window.location.href = "login.html";
 
         return;
 
     }
 
-    const productId =
-        localStorage.getItem("selectedProduct");
+    const productId = Number(localStorage.getItem("selectedProduct"));
 
     const product =
-        products.find(p => p.id == productId);
+        products.find(p => p.id === productId);
 
     if (!product) {
 
@@ -238,6 +237,8 @@ window.addCurrentProductToCart = function () {
         });
 
     }
+
+    updateCartCount();
 
     window.updateCartCount = function () {
 
@@ -329,6 +330,3 @@ if (menuBtn && navLinks) {
     };
 
 }
-
-// Load Product
-loadProduct();
